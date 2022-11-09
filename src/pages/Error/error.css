@@ -1,0 +1,30 @@
+.error {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.error h1 {
+  margin-bottom: 6px;
+}
+
+.error p {
+  font-style: italic;
+}
+
+.error .link {
+  background: rgba(255, 255, 255, 0.6);
+  padding: 6px 16px;
+  margin-top: 14px;
+  border-radius: 4px;
+  color: #000;
+  transition: 0.5s;
+}
+
+.error .link:hover {
+  background: #fff;
+  transform: scale(1.05);
+}
