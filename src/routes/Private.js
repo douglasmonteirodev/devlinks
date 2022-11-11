@@ -9,7 +9,7 @@ const Private = ({ children }) => {
 
   useEffect(() => {
     const checkLogin = async () => {
-      const unsub = onAuthStateChanged(auth, (user) => {
+      onAuthStateChanged(auth, (user) => {
         if (user) {
           const userData = {
             uid: user.uid,

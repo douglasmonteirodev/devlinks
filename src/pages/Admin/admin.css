@@ -1,9 +1,9 @@
-.admin-cotainer {
+.admin-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
-  padding-top: 50px;
+  padding: 0 6px 35px 0px;
 }
 
 .label {
@@ -48,6 +48,7 @@
   background: #363636b1;
   border-radius: 4px;
   padding: 14px 16px;
+  margin-bottom: 14px;
 }
 
 .preview {
