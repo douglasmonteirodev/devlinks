@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import Logo from "../../components/Logo";
 import { auth } from "../../services/firebaseConnection";
-import { signInWithEmailAndPassword } from "firebase/auth";
+import { createUserWithEmailAndPassword } from "firebase/auth";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import Input from "../../components/Input";
 
-import "./login.css";
+import "./signup.css";
 
-const Login = () => {
+const SignUp = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
@@ -21,13 +21,13 @@ const Login = () => {
       return;
     }
 
-    signInWithEmailAndPassword(auth, email, password)
+    createUserWithEmailAndPassword(auth, email, password)
       .then(() => {
-        toast.success("Login feito com sucesso");
+        toast.success("Cadastro feito com sucesso");
         navigate("/admin", { replace: true });
       })
-      .catch(() => {
-        toast.error("Senha ou email invalidos");
+      .catch((err) => {
+        console.log(err);
       });
   };
 
@@ -48,15 +48,15 @@ const Login = () => {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
-        <button type="submit">Acessar</button>
+        <button type="submit">Criar uma conta</button>
 
         <div className="login-text">
-          Não possui uma conta?
-          <Link to="/signup"> Crie uma agora!</Link>
+          Já possui uma conta?
+          <Link to="/login"> Acesse agora!</Link>
         </div>
       </form>
     </div>
   );
 };
 
-export default Login;
+export default SignUp;
