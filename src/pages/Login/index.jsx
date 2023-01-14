@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Logo from "../../components/Logo";
 import { auth } from "../../services/firebaseConnection";
 import { signInWithEmailAndPassword } from "firebase/auth";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import Input from "../../components/Input";
 
@@ -49,11 +49,6 @@ const Login = () => {
           onChange={(e) => setPassword(e.target.value)}
         />
         <button type="submit">Acessar</button>
-
-        <div className="login-text">
-          Não possui uma conta?
-          <Link to="/signup"> Crie uma agora!</Link>
-        </div>
       </form>
     </div>
   );
