@@ -14,13 +14,11 @@
 
 ## Objetivo:
 
-### Foi criar um sistema web onde o usuário permita casdastrar links de suas redes sociais.
+### Foi criar um sistema web onde permita o usuário cadastrar links de suas redes sociais.
 
-## Descrição
+<br/>
 
-###
-
-### <i> Infos: </i>
+## Descrição:
 
 - `Projeto criado com ReactJs e firebase para autenticação.`
 - `Usuário para login email:douglas@teste.com password:123456`
