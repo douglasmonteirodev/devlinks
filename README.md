@@ -16,8 +16,6 @@
 
 ### Foi criar um sistema web onde permita o usuário cadastrar links de suas redes sociais.
 
-<br/>
-
 ## Descrição:
 
 - `Projeto criado com ReactJs e firebase para autenticação.`
